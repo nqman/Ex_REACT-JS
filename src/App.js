@@ -1,7 +1,10 @@
+import BaiTapThucHanhLayout from "./BaiTapLayoutComponent/BaiTapThucHanhLayout";
+import "bootstrap/dist/css/bootstrap.css";
+
 function App() {
   return (
     <div>
-      <h1>APP</h1>
+      <BaiTapThucHanhLayout />
     </div>
   );
 }
