@@ -1,0 +1,90 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.glassContent {
+    background-image: url(../../public/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.glassContent::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.model {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 210px;
+}
+
+.model .modelLeft {
+    background-image: url(../../public/img/model.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    z-index: 20;
+    position: relative;
+}
+
+.modelLeft img {
+    width: 120px;
+    position: absolute;
+    top: 60px;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0.6;
+
+}
+
+.modelRight {
+    background-image: url(../../public/img/model.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    z-index: 20;
+}
+
+.glassesList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 130px 130px 0 130px;
+    justify-content: center;
+}
+
+.glassesList img {
+    width: 200px;
+    height: 70px;
+
+}
+
+.glassesList button {
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
+    margin: 5px;
+}
