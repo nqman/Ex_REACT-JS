@@ -1,7 +1,9 @@
+import GlassApp from "./BaiTapState/GlassApp";
+
 function App() {
   return (
     <div>
-      <h1>APP</h1>
+      <GlassApp />
     </div>
   );
 }
