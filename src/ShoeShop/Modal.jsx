@@ -8,10 +8,10 @@ export default function Modal({ product, isOpen, onClose }) {
   return (
     <>
       <div className="modal d-block" tabIndex={-1}>
-        <div className="modal-dialog">
+        <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Detail product</h5>
+              <h4 className="modal-title">Detail product</h4>
               <button
                 type="button"
                 className="btn-close"
@@ -24,21 +24,21 @@ export default function Modal({ product, isOpen, onClose }) {
                 className="m-auto d-block"
                 src={product.image}
                 alt=""
-                style={{ width: "200px", height: "200px" }}
+                style={{ width: "300px", height: "300px" }}
               />
               <table>
                 <tbody>
                   <tr>
                     <td className="fw-bolder">Name</td>
-                    <td>{product.name}</td>
+                    <td className="ps-5 p-2">{product.name}</td>
                   </tr>
                   <tr>
                     <td className="fw-bolder">Price</td>
-                    <td>${product.price}</td>
+                    <td className="ps-5 p-2">${product.price}</td>
                   </tr>
                   <tr>
                     <td className="fw-bolder">Description</td>
-                    <td>{product.description}</td>
+                    <td className="ps-5 p-2">{product.description}</td>
                   </tr>
                 </tbody>
               </table>
