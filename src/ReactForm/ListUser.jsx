@@ -5,7 +5,7 @@ export default function ListUser({ users, handleDeleteUser, onEdit }) {
     <table className="table">
       <thead>
         <tr>
-          <th className="bg-dark text-light">ID</th>
+          <th className="bg-dark text-light">Mã SV</th>
           <th className="bg-dark text-light">Name</th>
           <th className="bg-dark text-light">Account</th>
           <th className="bg-dark text-light">Password</th>

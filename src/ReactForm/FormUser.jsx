@@ -1,37 +1,39 @@
 import React, { useState, useEffect } from "react";
-
-export default function FormUser({ onSubmit, user, onUpdateUser }) {
-  const [value, setvalue] = useState({
-    code: "",
-    name: "",
-    phone: "",
-    email: "",
-  });
+const emptyValue = {
+  id: "",
+  code: "",
+  name: "",
+  phone: "",
+  email: "",
+};
+export default function FormUser({ onAddUser, user, onUpdateUser }) {
+  const [value, setValue] = useState(emptyValue);
 
   useEffect(() => {
     if (!user) return;
-    setvalue(user);
+    setValue(user);
   }, [user]);
   let handleChange = (e) => {
-    setvalue({ ...value, [e.target.name]: e.target.value });
+    setValue({ ...value, [e.target.name]: e.target.value });
     console.log(value);
   };
 
-  const handleSubmit = (e) => {
+  const handleAddUser = (e) => {
     e.preventDefault();
-    if (value.code) {
+
+    if (value.id) {
       //update
-      const { code, ...user } = value;
-      onUpdateUser(code, user);
+      const { id, ...user } = value;
+      onUpdateUser(id, user);
     } else {
       // add
-      onSubmit(value);
+      onAddUser(value);
     }
-    setvalue({ [e.target.name]: "" });
+    setValue(emptyValue);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleAddUser}>
       <h2 className="bg-dark text-light p-3">Thông tin sinh viên</h2>
       <div className="form-group row mb-4">
         <div className="col-6">

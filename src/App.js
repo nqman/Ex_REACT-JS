@@ -1,8 +1,10 @@
+import ReactForm from "./ReactForm/ReactForm";
+
 function App() {
   return (
-    <div>
-      <h1>APP</h1>
-    </div>
+    <>
+      <ReactForm />
+    </>
   );
 }
 
