@@ -81,7 +81,6 @@ export default function ReactForm() {
   return (
     <div className="container">
       <Toaster position="top-right" />
-      <h1 className="text-center">ReactForm</h1>
       <FormUser
         onAddUser={handleAddUser}
         onUpdateUser={handleUpdateUser}
