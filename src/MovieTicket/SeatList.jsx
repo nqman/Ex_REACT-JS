@@ -1,43 +1,27 @@
 import React from "react";
-import SeatItem from "./SeatItem";
+import SeatRow from "./SeatRow";
+
 const colNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export default function SeatList({ dataRows }) {
   return (
     <>
-      <div className="ps-5">
+      <div style={{ paddingLeft: "40px" }}>
         {colNumbers.map((number) => (
-          <span
-            className="text-warning fw-bold fs-3 text-center m-2"
+          <button
+            className="btn btn-outline-none text-warning fw-bold text-center fs-4 m-2 p-0"
             style={{
-              display: "inline-block",
-              width: "50px",
-              height: "50px",
-              lineHeight: "50px",
+              width: "40px",
+              height: "40px",
             }}
           >
             {number}
-          </span>
+          </button>
         ))}
       </div>
-      <div className="">
-        {dataRows.map((dataRow) => (
-          <div className="rowName">
-            <span
-              className="text-warning fw-bold fs-3 text-center"
-              style={{
-                display: "inline-block",
-                width: "50px",
-                height: "50px",
-                lineHeight: "50px",
-              }}
-            >
-              {dataRow.row}
-            </span>
-            <SeatItem seats={dataRow.seats} />
-          </div>
-        ))}
-      </div>
+      {dataRows.map((dataRow) => {
+        return <SeatRow dataRow={dataRow} />;
+      })}
     </>
   );
 }
