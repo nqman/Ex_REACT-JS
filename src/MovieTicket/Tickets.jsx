@@ -58,9 +58,9 @@ export default function Tickets() {
         <table class="table">
           <thead>
             <tr>
-              <th>Số ghế</th>
-              <th>Giá</th>
-              <th>Hủy</th>
+              <th style={{ width: "150px" }}>Số ghế</th>
+              <th style={{ width: "200px" }}>Giá</th>
+              <th style={{ width: "100px" }}>Hủy</th>
             </tr>
           </thead>
           <tbody>
