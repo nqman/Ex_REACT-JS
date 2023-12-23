@@ -11,12 +11,7 @@ export default function SeatItem({ seat, isSelected }) {
       payload: { ...seat, isSelected: !isSelected },
     });
   };
-  // const bookedSeats = useSelector((state) => {
-  //   if(state.movieTicket.bookedSeats){
 
-  //   }
-  //   return state.movieTicket.bookedSeats;
-  // });
   return (
     <button
       className={cn("btn  m-2", {

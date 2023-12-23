@@ -65,7 +65,7 @@ export default function Tickets() {
           </thead>
           <tbody>
             {selectedSeats.map((item) => (
-              <tr>
+              <tr key={item.name}>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
                 <td

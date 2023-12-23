@@ -7,8 +7,9 @@ export default function SeatList({ dataRows }) {
   return (
     <>
       <div style={{ paddingLeft: "40px" }}>
-        {colNumbers.map((number) => (
+        {colNumbers.map((number, index) => (
           <button
+            key={index}
             className="btn btn-outline-none text-warning fw-bold text-center fs-4 m-2 p-0"
             style={{
               width: "40px",
@@ -19,8 +20,8 @@ export default function SeatList({ dataRows }) {
           </button>
         ))}
       </div>
-      {dataRows.map((dataRow) => {
-        return <SeatRow dataRow={dataRow} />;
+      {dataRows.map((dataRow, index) => {
+        return <SeatRow key={index} dataRow={dataRow} />;
       })}
     </>
   );
