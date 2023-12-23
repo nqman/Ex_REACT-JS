@@ -5,13 +5,13 @@ import SeatItem from "./SeatItem";
 
 export default function SeatRow({ dataRow }) {
   const { seats, row } = dataRow;
-  const [newSeats, setNewSeats] = useState(seats);
+  // const [newSeats, setNewSeats] = useState(seats);
 
   const bookedSeats = useSelector((state) => {
     return state.movieTicket.bookedSeats;
   });
-  // console.log(bookedSeats);
-  // console.log(seats);
+
+  // hàm so sánh giá trị nếu trùng name thì lấy key và value mới của bookedSeats
   function changeSeats(seats, bookedSeats) {
     for (let i = 0; i < seats.length; i++) {
       const arr1 = seats[i];
@@ -22,14 +22,15 @@ export default function SeatRow({ dataRow }) {
         seats[i] = arr2;
       }
     }
-    setNewSeats(seats);
+    // setNewSeats(seats);
     return seats;
   }
 
-  useEffect(() => {
-    changeSeats(seats, bookedSeats);
-  }, [seats, bookedSeats]);
+  // useEffect(() => {
+  //   changeSeats(seats, bookedSeats);
+  // }, [seats, bookedSeats]);
 
+  const newSeats = changeSeats(seats, bookedSeats);
   // Danh sách ghế đang được chọn
   const selectedSeats = useSelector((state) => {
     return state.movieTicket.selectedSeats; // reducer movieTicket

@@ -14,6 +14,7 @@ export default function SeatItem({ seat, isSelected }) {
 
   return (
     <button
+      key={seat.name}
       className={cn("btn  m-2", {
         "btn-danger": seat.booked,
         "btn-success": isSelected,
